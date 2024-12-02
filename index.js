@@ -14,7 +14,7 @@ const uri = "mongodb+srv://"+'snowpoint100'+":"+'Z8o1BYVmWknOCELx'+"@cluster0.jx
 app.get('/', async (req, res) => {
     try {
 
-let result = ['1','2','3','4','5']
+let result = ['1','2','3','4','5','6']
 
 return res.json(result);
 
