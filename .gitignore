@@ -1,0 +1,49 @@
+// .gitignore.js - Script to generate a .gitignore file for an Express.js project
+
+const fs = require('fs');
+
+// Define the standard .gitignore content
+const gitIgnoreContent = `
+# Node modules
+/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+/dist
+/build
+
+# npm package-lock or yarn lock files (optional)
+package-lock.json
+yarn.lock
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Test coverage
+/coverage/
+
+# Other
+*.tgz
+`;
+
+// Function to write the .gitignore file
+function createGitIgnore() {
+  fs.writeFileSync('.gitignore', gitIgnoreContent, 'utf8');
+  console.log('.gitignore file has been created!');
+}
+
+// Run the function to generate the .gitignore
+createGitIgnore();
